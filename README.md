@@ -9,13 +9,15 @@ Precisa de um sistema de consiga compilar aplicação .net Core 5
 ## Execução
 
 Executar o comando abaixo(acessando a pasta onde o projeto foi descompactado) para iniciar o serviço:
-
+```
 dotnet run
+```
 
 O serviço deverá iniciar na porta 5001. A solução também pode ser aberta e executada via Visual Studio, com o número da porta variando.
 E o comando abaixo para executar todos os testes automatizados:
-
+```
 dotnet test
+```
 
 ## Dados
 
@@ -25,10 +27,12 @@ Esse exemplo não usa banco de dados. Cada vez que é aberto o sistema, ele cria 5
 
 Rota para inserir um voto no restaurante escolhido do dia
 POST - https://localhost:5001/api/vote/
+```
 {
 	"userId": int,
     "restaurantId": int
 }
+```
 
 Rota para retornar o restaurante escolhido do dia. Se um for dado como vitorioso, o dia é passado automaticamente.
 GET - https://localhost:5001/api/vote/result
@@ -38,7 +42,7 @@ GET - https://localhost:5001/api/vote/reset
 
 ## O que vale destacar no código implementado?
 
-Nada demais, é apenas uma API REST.
+Nada demais, é apenas uma API REST. Foquei em fazer apenas o que foi pedido, deixando outros pontos que estariam presente se fosse uma aplicação final.
 
 ## O que poderia ser feito para melhorar o sistema?
 
@@ -49,4 +53,4 @@ Nada demais, é apenas uma API REST.
 
 ## Algo a mais que você tenha a dizer
 
-Eu acabei fazendo bem simples e rápido o sistema. Pelo que vi, atendi todos os requisitos pedidos. Espero não ser descontado por ter usado aquelas listas estaticas, apenas quis simplificar e focar nas rotas e validações.
+Eu acabei fazendo bem simples e rápido o sistema. Pelo que vi, atendi todos os requisitos pedidos. Espero não ser descontado por ter usado aquelas listas estaticas, apenas quis simplificar e focar nas rotas e validações =P.
