@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RestaurantSelectorService.Controllers;
 
 namespace RestaurantSelectorService
 {
@@ -19,6 +20,7 @@ namespace RestaurantSelectorService
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            VoteController.ResetDatabase();
         }
 
         public IConfiguration Configuration { get; }
